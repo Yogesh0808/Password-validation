@@ -69,6 +69,10 @@ body {
     white-space: nowrap;
 }
 
+.Box input:focus {
+    box-shadow: 2px 4px 40px rgba(193, 238, 255, 0.455);
+}
+
 .checklist i {
     margin-right: 20px;
     
@@ -83,20 +87,20 @@ body {
     
 }
 
-@keyframes shake {
+@keyframes scalei {
     0%, 100% {
-      transform: translateX(0) rotate(45deg);
+      transform: scale(1.5);
     }
-    10%, 30%, 50%, 70%, 90% {
-      transform: translateX(-4px);
-    }
+    10%, 30%, 50% {
+        transform: translateY(-2px) rotate(1deg);
+    } 
     20%, 40%, 60%, 80% {
-      transform: translateX(3px);
+      transform: translateX(2px);
     }
   }
 
 .container i:hover {
-    animation: shake 1s infinite;
+    animation: scalei 0.7s infinite;
 
 }
 
@@ -139,19 +143,34 @@ body {
     background-color:rgba(0, 28, 0, 0.613);
 }
 
+footer {
+    position: absolute;
+    bottom: 2px;
+    right: 1px;
+}
+
 /* Devices with a maximum width of 767 pixels (e.g., smartphones) */
 @media only screen and (max-width: 767px) {
 
     body {
         background: url("https://images.unsplash.com/photo-1493305457700-d3d24daf8c8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80");
         background-position: cover;
-        overflow: hidden;
+        overflow: scroll;
         bottom: 0;
+        right: 0;
     }
     #submit:hover {
         transform: scale(1.05) translateY(-2px);
         box-shadow: 0 0 60px rgba(255, 253, 253, 0.5);
         background-color: rgba(24, 49, 55,0.5);
+    }
+
+    .Box input:focus {
+        box-shadow: 2px 4px 40px rgb(67, 58, 83);
+    }
+
+    .Box input:active {
+        border: 1px solid olive;
     }
   }
   
